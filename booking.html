@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="images/logo-mark.svg">
+    <title>Запись — Event Beauty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600&family=Playfair+Display:wght@600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-booking">
+ <div class="wrapper">
+  <header class="header">
+    <a href="index.html" class="logo header__logo" aria-label="Event Beauty"><img src="images/logo.png" alt="Event Beauty" class="logo__img"></a>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a href="index.html">О нас</a></li>
+        <li><a href="#!">Услуги</a></li>
+        <li><a href="portfolio.html">Портфолио</a></li>
+        <li><a href="#!">Отзывы</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta"><a href="booking.html" class="btn__violet">ЗАПИСАТЬСЯ</a></div>
+  </header>
+  <main class="main">
+    <div class="form_page">
+      <h1 class="form_title">Запись</h1>
+      <p class="form_lead">Работаем по Санкт-Петербургу. Оставьте контакты и выберите услугу — мы свяжемся с вами и подберём время.</p>
+      <form class="form" id="booking-form" action="#">
+        <div class="row">
+          <div class="col-12 col-md-4"><label for="b_name" class="form-label">Как к вам обращаться?</label><input type="text" class="form-control" id="b_name" placeholder="Ваше имя" autocomplete="given-name" required minlength="2" maxlength="40" pattern="[A-Za-zА-Яа-яЁё]+([ '\-][A-Za-zА-Яа-яЁё]+)*" title="Только буквы, пробел и дефис"><div class="invalid-feedback">Только буквы, пробел и дефис, минимум 2 символа</div></div>
+          <div class="col-12 col-md-4"><label for="b_phone" class="form-label">Телефон</label><input type="tel" class="form-control" id="b_phone" placeholder="+7 (999) 555-35-35" inputmode="tel" autocomplete="tel" required pattern="(\+7|7|8)([\s\-\(\)]*[0-9]){10}" title="Введите номер полностью: +7 (999) 555-35-35"><div class="invalid-feedback">Введите номер полностью: +7 (999) 555-35-35</div></div>
+          <div class="col-12 col-md-4"><label for="b_mail" class="form-label">Email</label><input type="email" class="form-control" id="b_mail" placeholder="name@example.com" autocomplete="email" required pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9\-]+(\.[A-Za-z0-9\-]+)*\.[A-Za-z]{2,}" title="Например: name@example.com"><div class="invalid-feedback">Проверьте email, например name@example.com</div></div>
+          <div class="col-12 col-md-8"><label for="b_service" class="form-label">Какая услуга вас интересует?</label>
+            <select class="form-select" id="b_service" required><option value="" selected disabled>Выберите услугу</option><option value="Макияж">Макияж</option><option value="Волосы">Волосы</option><option value="Образ под ключ">Образ под ключ (макияж + волосы)</option><option value="VFX-макияж">VFX-макияж</option></select></div>
+          <div class="col-12 col-md-4 form_send_col"><button type="submit" class="btn__lime w-100" id="btn_send">ОТПРАВИТЬ</button></div></div>
+        </form>
+      </div>
+      <div class="form_frame"><img src="./images/banner.jpg" alt="">
+        <img src="./images/b2.png" alt="" class="deco deco--f1">
+        <img src="./images/b4.png" alt="" class="deco deco--f2">
+        <img src="./images/b1.png" alt="" class="deco deco--f3">
+      </div>
+  </main>
+    <div class="modal" id="my-modal" aria-hidden="true">
+      <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="popup1">
+        <img src="./images/b1.png" alt="" class="deco modal__deco modal__deco--btn">
+        <button class="modal__close-btn" id="close-my-modal-btn" aria-label="Закрыть">
+          <svg width="13" height="15" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"/><path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z"/></svg>
+        </button>
+        <h2 id="popup1">Мы получили вашу заявку!</h2>
+        <p id="popup2">Мы свяжемся с вами в течение 24 часов и&nbsp;подберём удобное время.</p>
+      </div>
+    </div>
+ </div>
+  <footer class="footer">
+   <div class="wrapper">
+    <div class="footer_info">
+      <div class="footer_left c-4">
+        <a href="index.html" class="logo logo--footer" aria-label="Event Beauty"><img src="images/logo-light.png" alt="Event Beauty" class="logo__img"></a>
+        <p class="footer_city">Работаем по Санкт-Петербургу</p>
+        <ul class="footer__doc">
+          <li><a href="#!">Политика конфиденциальности</a></li>
+          <li><a href="#!">Политика обработки персональных данных</a></li>
+        </ul>
+      </div>
+      <div class="footer_contacts c-4">
+        <a href="tel:+79218352089" class="footer__phone">+7 (921) 835-20-89</a>
+        <a href="mailto:hello@event-beauty.ru" class="footer__mail">hello@event-beauty.ru</a>
+        <div class="social">
+          <a href="#" class="footer-social">VK</a>
+          <a href="#" class="footer-social">Telegram</a>
+          <a href="#" class="footer-social">Rutube</a>
+        </div>
+        <p class="footer_copy">© EVENT BEAUTY, 2026</p>
+      </div>
+      <div class="footer_right c-4">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li><a href="index.html">О НАС</a></li>
+            <li><a href="#!">УСЛУГИ</a></li>
+            <li><a href="portfolio.html">ПОРТФОЛИО</a></li>
+            <li><a href="#!">ОТЗЫВЫ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+   </div>
+  </footer>
+  <script defer src="js/pop-up.js"></script>
+</body>
+</html>
